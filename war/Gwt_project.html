@@ -44,19 +44,34 @@
       </div>
     </noscript>
 
-    <h1>Web Application Starter Project</h1>
+<div id="header">
+   	<div class="wrapper">
+   		<div id="coll-left">
+   			<h1> Blog </h1>
+   		</div>
+  
+   		<div id="coll-right">
+			<div id="loginPanel">
+				<div id="loginTbHolder">
+					<p>Login</p>
+				</div>
+				<div id="passwdTbHolder">
+					<p>Password</p>
+				</div>
+				<div id="signinBtnHolder"></div>
+				<div id="siginErr" class="hidden">
+					<p>Bad Login or password.</p>
+				</div>
+			</div>
+			
+			<div id="loggedinPanel" class="hidden">
+				<div id="userNameLblHolder">Your login is: </div>
+				<div id="logoutBtnHolder"></div>
+			</div>
 
-    <table align="center">
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Please enter your name:</td>        
-      </tr>
-      <tr>
-        <td id="nameFieldContainer"></td>
-        <td id="sendButtonContainer"></td>
-      </tr>
-      <tr>
-        <td colspan="2" style="color:red;" id="errorLabelContainer"></td>
-      </tr>
-    </table>
+		</div>
+   	</div>
+   </div>
+
   </body>
 </html>

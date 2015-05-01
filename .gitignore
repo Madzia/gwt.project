@@ -1,5 +1,7 @@
 .settings
 .settings/
+gwt-unitCache/
+
 
 target
 test
