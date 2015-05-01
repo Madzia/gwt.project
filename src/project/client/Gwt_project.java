@@ -21,6 +21,9 @@ public class Gwt_project implements EntryPoint {
 	TextBox loginTextField = new TextBox();
 	TextBox passwordTextField = new TextBox();
 	Label loginName = new Label("");
+	
+	String login = "";
+	
 	int num = 0;
 
 	private void CreateLoginPanel(){
@@ -34,7 +37,7 @@ public class Gwt_project implements EntryPoint {
 
 		loginButton.addClickHandler(new ClickHandler() {
 			public void onClick(ClickEvent event) {
-				final String login = loginTextField.getText();
+				login = loginTextField.getText();
 				String passwd = passwordTextField.getText();
 				loginService.checkUser(login, passwd, new AsyncCallback<Boolean>() {
 					
@@ -67,11 +70,15 @@ public class Gwt_project implements EntryPoint {
 						
 					}
 				});
-		}
-	});
+			}
+		});
 	}
+	
+	
 	
 	public void onModuleLoad() {
 		CreateLoginPanel();
+		
+		
 	}
 }
