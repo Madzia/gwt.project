@@ -17,6 +17,16 @@
     <url-pattern>/gwt_project/login</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <servlet-name>entityServlet</servlet-name>
+    <servlet-class>project.server.EntityServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>entityServlet</servlet-name>
+    <url-pattern>/gwt_project/entity</url-pattern>
+  </servlet-mapping>
+  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>Gwt_project.html</welcome-file>

@@ -1,10 +1,12 @@
 package project.shared;
 
+import java.io.Serializable;
 import java.util.Date;
 
-import com.google.gwt.user.client.Random;
-
-public class Articles {
+public class Articles implements Serializable, Comparable<Articles>  {
+	
+	private static final long serialVersionUID = 1L;
+	
 	private int id;
 	private Date date;
 	private String autor;
@@ -15,8 +17,8 @@ public class Articles {
 	public Articles(){	
 	}
 	
-	public Articles(Date date, String autor, String article){
-		this.id = Random.nextInt(Integer.MAX_VALUE);
+	public Articles(int id, Date date, String autor, String article){
+		this.id = id;
 		this.date = date;
 		this.autor = autor;
 		this.article = article;
@@ -57,5 +59,17 @@ public class Articles {
 	
 	public void addDisLike(){
 		this.dislike +=1;
+	}
+
+	@Override
+	public int compareTo(Articles o) {
+		if(this.getDate().before(o.getDate())){
+			return 1;
+		}
+		else if(this.getDate().after(o.getDate())){
+			return -1;
+		}else{
+			return 0;
+		}
 	}
 }

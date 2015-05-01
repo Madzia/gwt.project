@@ -1,0 +1,2 @@
+serviceClass: project.client.EntityService
+path: DB287BDD2C266BBE4CC8CE012E01DE71.gwt.rpc
