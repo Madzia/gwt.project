@@ -8,13 +8,15 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("entity")
 public interface EntityService extends RemoteService {
 	
-	Boolean deleteArticle(int id);
+	Boolean deleteArticle(String id);
 	
 	boolean addArticle(String article, String autor, java.util.Date date);
 	
-	Boolean editArticle(int id, String article);
+	Boolean editArticle(String id, String article);
 	
 	List<Articles> getAllEntities();
+	
+	String getArticle(String id);
 
 	int addLike(String id);
 	

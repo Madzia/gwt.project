@@ -20,9 +20,9 @@ public class EntityServiceImpl extends RemoteServiceServlet implements EntitySer
 	public EntityServiceImpl(){
 	}
 	
-	public Boolean deleteArticle (int id){
+	public Boolean deleteArticle (String id){
 		for(Articles e : articlesDb){
-			if ( e.getId() == id ){
+			if ( String.valueOf(e.getId()).equals(id )){
 				articlesDb.remove(e);
 				return true;
 			}
@@ -33,14 +33,14 @@ public class EntityServiceImpl extends RemoteServiceServlet implements EntitySer
 	public boolean addArticle (String article, String autor, java.util.Date date){
 		Random rnd = new Random();
 		Articles newItem = new Articles(rnd.nextInt(), date, autor, article);
-		articlesDb.add(newItem);
+		articlesDb.add(0, newItem);
 		return true;
 	}
 
 	
-	public Boolean editArticle (int id, String article){
+	public Boolean editArticle (String id, String article){
 		for(Articles e : articlesDb){
-			if ( e.getId() == id ){
+			if ( String.valueOf(e.getId()).equals(id )){
 				e.editedArticle(article);
 				return true;
 			}
@@ -73,6 +73,16 @@ public class EntityServiceImpl extends RemoteServiceServlet implements EntitySer
 			}
 		}
 		return 0;
+	}
+
+	@Override
+	public String getArticle(String id) {
+		for(Articles e : articlesDb){
+			if ( String.valueOf(e.getId()).equals(id) ){
+				return e.getArticle();
+		}
+	}
+	return "";
 	}
 
 }

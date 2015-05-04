@@ -2,16 +2,30 @@
 
 
 /** Example rules used by the template application (remove for your app) */
+@external .gwt-RichTextArea;
+
+div#header {
+	background: linear-gradient(45deg, #0965D5 0px, #7EB2F2 100%) transparent;
+ 	background-color: #7EB2F2;
+	color: white;
+	padding: 10px;
+	padding-left: 25px;
+	clear: both;
+	overflow: auto;
+	margin-bottom: 10px;
+}
+
 h1 {
   font-size: 2em;
   font-weight: bold;
-  color: #777777;
+  color: #0F3F7B;
   margin: 40px 0px 70px;
   text-align: center;
 }
 
 .sendButton {
   display: block;
+  margin: 10px;
   font-size: 16pt;
 }
 
@@ -31,4 +45,43 @@ h1 {
 /** Set ids using widget.getElement().setId("idOfElement") */
 #closeButton {
   margin: 15px 6px 6px;
+}
+
+div#loginPanel {
+	margin-top: 10px;
+	padding-bottom: 305px;
+}
+
+#signinBtnHolder {
+	padding-top: 15px;
+}
+
+#loggedinPanel {
+	margin-top: 10px;
+	padding-bottom: 170px;
+}
+
+.gwt-Button {
+         font-size: 16px;
+         font-weight: normal;
+         color: #FFFFFF;
+         background: #116AAA !important; 
+}
+
+#articlesLocation {
+	float: left;
+	padding-left: 70px;
+	margin-top: -380px;
+}
+
+.gwt-TextArea {
+	background: transparent;
+	resize: none;
+	color: #B0D1E8;
+}
+
+.gwt-TextArea-readonly {
+	background: transparent;
+	resize: none;
+	color: #000000;
 }
