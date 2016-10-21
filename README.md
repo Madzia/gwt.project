@@ -11,7 +11,7 @@ In case of project lauch you need to :
 by writing in shell:
 
 ```js
-git clone hhttps://github.com/Madzia/gwt.project.git
+git clone hhttps://github.com/magda2609/gwt.project.git
 cd gwt.project
 ```
 
